@@ -9,7 +9,6 @@ The site is focused on the conservation and education about giant pandas.
 - Responsive design (desktop, tablet, mobile)
 - CSS Grid and Flexbox layout
 - Clean, semantic HTML
-- Interactive map and cards
 
 ## Technologies
 - HTML5
