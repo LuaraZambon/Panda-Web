@@ -175,6 +175,25 @@
     grid-template-columns: 1fr; 
   }
 
+  .curiosity-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+
+
+  .card-footer {
+    display: flex;
+    justify-content: center; 
+    margin-top: auto;
+  }
+
   .btn {
     padding: 15px 32px;
     border: 0;
