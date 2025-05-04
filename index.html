@@ -1,366 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .main-header {
-    position: relative;
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(0, 50, 0, 0.4);
-    z-index: 1;
-    position: relative;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .logo img {
-    height: 60px;
-    width: 70px;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .hero-content {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: flex-start; 
-    padding: 3rem 2rem;
-    max-width: 600px;
-    z-index: 1;
-    position: relative;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta-btn {
-    padding: 15px 32px;
-    border: 0;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    text-align: none;
-    display: block;
-    font-size: 15px;
-    margin: 1rem auto 0 auto;
-    cursor: pointer;
-    border-radius: 8px;
-    color: black;
-    background-color:white;
-    transition: backgound-color 0.5s ease;
-    text-align: center;
-  }
-
-  .cta-btn:hover {
-    background-color: #999999;
-  }
-
-  .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 3rem 2rem;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .about-content {
-    flex: 1 1 400px;
-    max-width: 600px;
-  }
-  
-  .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
-  .panda-facts {
-    padding-left: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .panda-facts li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .about-image {
-    width: 40%;
-    text-align: center;
-  }
-  
-  .about-image img {
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  }
-  .curiosities-section {
-    padding: 4rem 2rem;
-    background-color: #3e5a2f;
-    color: white;
-    text-align: center;
-  }
-  
-  .curiosities-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .curiosities-section p{
-    color: black;
-    padding-bottom: 2rem;
-  }
-
-  .curiosities-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr; 
-  }
-
-  .curiosity-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; 
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      background-color: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      height: 100%;
-    }
-
-
-  .card-footer {
-    display: flex;
-    justify-content: center; 
-    margin-top: auto;
-  }
-
-  .btn {
-    padding: 15px 32px;
-    border: 0;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    text-align: none;
-    display: block;
-    font-size: 15px;
-    margin: 1rem auto 0 auto;
-    cursor: pointer;
-    border-radius: 8px;
-    color: white;
-    background-color: #3e5a2f;
-    transition: backgound-color 0.5s ease;
-    text-align: center;
-  }
-
-  .btn:hover {
-    background-color: #2a3f28;
-  }
-
-  @media (min-width: 768px) {
-    .curiosities-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .curiosities-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  .curiosity-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-
-  .curiosity-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0.8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .curiosity-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: #2c2c2c;
-    text-align: center;
-  }
-  
-  .where-to-find {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 2rem;
-    padding: 3rem 2rem;
-    align-items: center;
-    justify-content: center;
-    background-color: white
-  }
-  
-  .find-image {
-    width: 600px;
-    text-align: center;
-  }
-  
-  .find-image img {
-    max-width: 100%;
-    border-radius: 12px;
-  }
-  
-  .find-content {
-    flex: 1 1 400px;
-    max-width: 600px;
-  }
-  
-  .find-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .find-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
-  .panda-locations {
-    list-style: 🌍;
-    padding-left: 1.2rem;
-  }
-  
-  .panda-locations li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .contact {
-    background-color: #f0f4f3;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-  }
-  
-  .contact p {
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 30px;
-  }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .contact input,
-  .contact textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    resize: none;
-  }
-  
-  .contact button {
-    padding: 12px;
-    background-color: #4a6f46;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .contact button:hover {
-    background-color: #3e5d3b;
-  }
-  
-  footer {
-    background-color: #2f4f30;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-  }
-
-  footer {
-    background-color: #2f4f30;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giant Pandas</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="main-header">
+        <img src="images/header.png" alt="Giant Panda" class="background-image"/>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logoanimalworld.png" alt="Animal World"/>
+                <span>Animal World</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#curiosities">Curiosities</a></li>
+                <li><a href="#where">Where to find</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Discover everything about Giant Pandas!</h1>
+            <a href="#about"><button class="cta-btn">Learn More</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="about-section" id="about">
+            <div class="about-content">
+                <h2>About Giant Pandas</h2>
+                <p>
+                    Giant pandas (scientific name: <strong>Ailuropoda melanoleuca</strong>) are native to the mountain forests of central China. They are easily recognized by their black-and-white fur and are loved around the world for their cute appearance.
+                  </p>
+                  <ul class="panda-facts">
+                    <li><strong>Weight:</strong> 70–160 kg (up to 350 lbs)</li>
+                    <li><strong>Diet:</strong> 99% bamboo</li>
+                    <li><strong>Lifespan:</strong> Up to 20 years in the wild, more in captivity</li>
+                    <li><strong>Habitat:</strong> Bamboo forests in Sichuan, Shaanxi, and Gansu</li>
+                    <li><strong>Conservation status:</strong> Vulnerable (thanks to ongoing protection)</li>
+                  </ul>
+                  <p>Pandas spend most of their day eating and resting. Despite being classified as carnivores, their diet is almost entirely bamboo. They play a key role in their ecosystem by helping bamboo forests grow and stay healthy.
+                </p>
+              </div>
+              <div class="about-image">
+                <img src="images/pandacomendobambu.jpg" alt="Panda eating bamboo" />
+              </div>
+            </section>
+            </div>
+        </section>
+        <section class="curiosities-section" id="curiosities">
+          <h2>Curiosities</h2>
+          <div class="curiosities-grid">
+            <div class="curiosity-card">
+              <h3>Diet</h3>
+              <p>      Giant pandas eat mostly bamboo, consuming up to 14 hours a day. Their strong jaws help crush the tough stalks. Though classified as carnivores, they rarely eat meat and rely almost entirely on plants.
+                </p>
+                <div class="card-footer">
+                <a href="https://wwf.panda.org/discover/knowledge_hub/endangered_species/giant_panda/panda/what_do_pandas_they_eat/"><button class="btn">Read More</button></a>
+              </div>
+            </div>
+            <div class="curiosity-card">
+              <h3>Communication</h3>
+              <p>Pandas communicate through sounds, scents, and body language. They bark, growl, and bleat to express emotions or warn others. Scent-marking is used to mark territory or signal readiness for mating.
+              </p>
+              <div class="card-footer">
+                <a href="https://www.sciencing.com/pandas-communicate-4567356/"><button class="btn">Read More</button></a>
+            </div>
+            </div>
+            <div class="curiosity-card">
+              <h3>Conservation</h3>
+              <p>TGiant pandas were once endangered, but efforts in conservation have helped them recover. Today, they are considered vulnerable. Protected reserves, breeding programs, and habitat restoration are key to ensuring their survival.</p>
+              <div class="card-footer">
+              <a href="https://nationalzoo.si.edu/animals/panda-conservation#:~:text=The%20Giant%20Panda%20Conservation%20Program%20relies%20on%20a%20comprehensive%20approach,international%20collaboration%20and%20public%20engagement."><button class="btn">Read More</button></a>
+            </div>
+          </div>
+            <div class="curiosity-card">
+              <h3>Habitat</h3>
+              <p>Pandas live in mountainous bamboo forests in central China. These regions provide dense vegetation, cool temperatures, and plenty of food. They prefer quiet, isolated areas with little human activity to thrive.</p>
+              <div class="card-footer">
+              <a href="https://wwf.panda.org/discover/knowledge_hub/endangered_species/giant_panda/panda/where_panda_lives_habitat/"><button class="btn">Read More</button></a>
+          </div>
+          </div>
+        </section>
+        <section class="where-to-find" id="where">
+            <div class="find-image">
+              <img src="images/mapa.png" alt="Panda location image">
+            </div>
+            <div class="find-content">
+              <h2>Where to Find Pandas</h2>
+              <p>
+                You can visit giant pandas in several zoos and conservation parks around the world. These places offer protected environments where you can learn about and even see pandas up close!
+              </p>
+              <ul class="panda-locations">
+                <li><strong>China:</strong> Chengdu Research Base, Dujiangyan Panda Center</li>
+                <li><strong>Japan:</strong> Adventure World, Wakayama</li>
+                <li><strong>USA:</strong> Smithsonian’s National Zoo (Washington, D.C.)</li>
+                <li><strong>Germany:</strong> Berlin Zoo</li>
+                <li><strong>Austria:</strong> Schönbrunn Zoo, Vienna</li>
+                <li><strong>France:</strong> ZooParc de Beauval</li>
+                <li><strong>Malaysia:</strong> Zoo Negara, Kuala Lumpur</li>
+              </ul>
+            </div>
+          </section>
+          <section class="contact" id="contact">
+            <div class="contact-container">
+              <h2>Contact</h2>
+              <p>Do you have any questions or want to know more about giant pandas? Send us a message!</p>
+              <form>
+                <input type="text" placeholder="your name" required>
+                <input type="email" placeholder="your email" required>
+                <textarea placeholder="your message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+    </main>
+          
+        <footer>
+  <p>
+    &copy; 2025 Educational Project - Developed by Luara Zambon as part of the web developer course.
+  </p>
+</footer>
+          
+      
