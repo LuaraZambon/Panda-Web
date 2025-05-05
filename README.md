@@ -3,7 +3,7 @@
 This is a responsive web project created for my Web Development course.  
 The site is focused on the conservation and education about giant pandas.
 
-🔗 **Live Site:** [Click here to visit](https://your-site-name.netlify.app)
+🔗 **Live Site:** [Click here to visit](https://animalworldpanda.netlify.app/)
 
 ## Features
 - Responsive design (desktop, tablet, mobile)
